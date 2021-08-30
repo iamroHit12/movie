@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./Profile.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./profile.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-expand-md">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">LOGO</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">movies</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">about us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">help</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">login</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <button class="btn px-3 shadow-none nav-link signup">sign up</button>
+                    </li>
+                </ul>
+            </div>
+            <button class="shadow-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-5 mb-5">
+        <div class="header d-flex">
+            <div class="me-auto">
+                <span class="title">my account</span>
+            </div>
+        </div>
+        <div class="body row justify-content-center mt-5">
+            <div class="col-md-4">
+                <div class="row no-gutters justify-content-center w-100">
+                    <div class="profile">
+                        <div class="d-flex mt-3"><button class="edit ms-auto me-3"><i class="fa fa-2x fa-pencil"></i></button></div>
+                        <div class="d-flex">
+                            <img class="mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1200px-Circle-icons-profile.svg.png" alt="">
+                        </div>
+                        <div class="d-flex mt-5">
+                            <button class="logout mx-auto">log out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="navigator row no-gutters py-3 px-3 mt-5 mt-md-0 m-0">
+                    <h3 target="1" id="over" class="single text-center">profile</h3>
+                    <h3 target="2" id="rev" class="single text-center">fav. movie</h3>
+                    <h3 target="3" id="write" class="single text-center">rated movies</h3>
+                    <h3 target="4" id="rel" class="single text-center">change password</h3>
+                </div>
+                <div class="content mt-5">
+                    <div class="target" id="div1">
+                        <h1 class="profile_name">brooklyn simmons</h1>
+                        <form class="py-4 px-4 mt-4">
+                            <div class="mb-3">
+                                <label class="form-label"><h3>username</h3></label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><h3>email address</h3></label>
+                                <input class="form-control" type="email">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><h3>first name</h3></label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><h3>last name</h3></label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><h3>country</h3></label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><h3>state</h3></label>
+                                <input class="form-control" type="text">
+                            </div class="mb-3">
+                            <div class="d-flex">
+                                <button class="mx-auto">save</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="target" id="div2">
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="d-flex mt-3">
+                                        <div class="me-auto">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="d-flex mt-3">
+                                        <div class="me-auto">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="d-flex mt-3">
+                                        <div class="me-auto">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="d-flex mt-3">
+                                        <div class="me-auto">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="d-flex mt-3">
+                                        <div class="me-auto">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="d-flex mt-3">
+                                        <div class="me-auto">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="target" id="div3">
+                        <div class="d-md-flex">
+                            <img class="pic2 mx-auto" src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                            <div class="mx-4 mt-3 mt-md-0">
+                                <h3>run (2019)</h3>
+                                <i class="d-flex">
+                                    <svg width="347" height="30" viewBox="0 0 347 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                        <path d="M50 20.0875L57.725 24.75L55.675 15.9625L62.5 10.05L53.5125 9.2875L50 1L46.4875 9.2875L37.5 10.05L44.325 15.9625L42.275 24.75L50 20.0875Z" fill="#FFB800"/>
+                                        <path d="M85 20.0875L92.725 24.75L90.675 15.9625L97.5 10.05L88.5125 9.2875L85 1L81.4875 9.2875L72.5 10.05L79.325 15.9625L77.275 24.75L85 20.0875Z" fill="#FFB800"/>
+                                        <path d="M120 20.0875L127.725 24.75L125.675 15.9625L132.5 10.05L123.513 9.2875L120 1L116.488 9.2875L107.5 10.05L114.325 15.9625L112.275 24.75L120 20.0875Z" fill="#FFB800"/>
+                                        <path d="M155 20.0875L162.725 24.75L160.675 15.9625L167.5 10.05L158.513 9.2875L155 1L151.488 9.2875L142.5 10.05L149.325 15.9625L147.275 24.75L155 20.0875Z" fill="#FFB800"/>
+                                        <path d="M190 20.0875L197.725 24.75L195.675 15.9625L202.5 10.05L193.513 9.2875L190 1L186.488 9.2875L177.5 10.05L184.325 15.9625L182.275 24.75L190 20.0875Z" fill="#FFB800"/>
+                                        <path d="M225 20.0875L232.725 24.75L230.675 15.9625L237.5 10.05L228.513 9.2875L225 1L221.488 9.2875L212.5 10.05L219.325 15.9625L217.275 24.75L225 20.0875Z" fill="#FFB800"/>
+                                        <path d="M260 20.0875L267.725 24.75L265.675 15.9625L272.5 10.05L263.513 9.2875L260 1L256.488 9.2875L247.5 10.05L254.325 15.9625L252.275 24.75L260 20.0875Z" fill="#FFB800"/>
+                                        <path d="M297 20.0875L304.725 24.75L302.675 15.9625L309.5 10.05L300.513 9.2875L297 1L293.488 9.2875L284.5 10.05L291.325 15.9625L289.275 24.75L297 20.0875Z" fill="#FFB800"/>
+                                        <path d="M332 20.0875L339.725 24.75L337.675 15.9625L344.5 10.05L335.513 9.2875L332 1L328.488 9.2875L319.5 10.05L326.325 15.9625L324.275 24.75L332 20.0875Z" fill="white"/>
+                                    </svg>
+                                    <h3>(your rating)</h3>
+                                </i>
+                                <h3>your review</h3>
+                                <p class="text">Best Movie <br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                            </div>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="d-md-flex mt-5">
+                            <img class="pic2 mx-auto" src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                            <div class="mx-4 mt-3 mt-md-0">
+                                <h3>run (2019)</h3>
+                                <i class="d-flex">
+                                    <svg width="347" height="30" viewBox="0 0 347 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                        <path d="M50 20.0875L57.725 24.75L55.675 15.9625L62.5 10.05L53.5125 9.2875L50 1L46.4875 9.2875L37.5 10.05L44.325 15.9625L42.275 24.75L50 20.0875Z" fill="#FFB800"/>
+                                        <path d="M85 20.0875L92.725 24.75L90.675 15.9625L97.5 10.05L88.5125 9.2875L85 1L81.4875 9.2875L72.5 10.05L79.325 15.9625L77.275 24.75L85 20.0875Z" fill="#FFB800"/>
+                                        <path d="M120 20.0875L127.725 24.75L125.675 15.9625L132.5 10.05L123.513 9.2875L120 1L116.488 9.2875L107.5 10.05L114.325 15.9625L112.275 24.75L120 20.0875Z" fill="#FFB800"/>
+                                        <path d="M155 20.0875L162.725 24.75L160.675 15.9625L167.5 10.05L158.513 9.2875L155 1L151.488 9.2875L142.5 10.05L149.325 15.9625L147.275 24.75L155 20.0875Z" fill="#FFB800"/>
+                                        <path d="M190 20.0875L197.725 24.75L195.675 15.9625L202.5 10.05L193.513 9.2875L190 1L186.488 9.2875L177.5 10.05L184.325 15.9625L182.275 24.75L190 20.0875Z" fill="#FFB800"/>
+                                        <path d="M225 20.0875L232.725 24.75L230.675 15.9625L237.5 10.05L228.513 9.2875L225 1L221.488 9.2875L212.5 10.05L219.325 15.9625L217.275 24.75L225 20.0875Z" fill="#FFB800"/>
+                                        <path d="M260 20.0875L267.725 24.75L265.675 15.9625L272.5 10.05L263.513 9.2875L260 1L256.488 9.2875L247.5 10.05L254.325 15.9625L252.275 24.75L260 20.0875Z" fill="#FFB800"/>
+                                        <path d="M297 20.0875L304.725 24.75L302.675 15.9625L309.5 10.05L300.513 9.2875L297 1L293.488 9.2875L284.5 10.05L291.325 15.9625L289.275 24.75L297 20.0875Z" fill="#FFB800"/>
+                                        <path d="M332 20.0875L339.725 24.75L337.675 15.9625L344.5 10.05L335.513 9.2875L332 1L328.488 9.2875L319.5 10.05L326.325 15.9625L324.275 24.75L332 20.0875Z" fill="white"/>
+                                    </svg>
+                                    <h3>(your rating)</h3>
+                                </i>
+                                <h3>your review</h3>
+                                <p class="text">Best Movie <br> Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                            </div>
+                        </div>
+                        <div class="hr"></div>
+                    </div>
+                    <div class="target" id="div4">
+                        <h1 class="profile_name">brooklyn simmons</h1>
+                        <form class="py-4 px-4 mt-5">
+                            <div class="mb-3">
+                                <label class="form-label"><h3>old password</h3></label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><h3>new password</h3></label>
+                                <input class="form-control" type="email">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label"><h3>confirm new password</h3></label>
+                                <input class="form-control" type="text">
+                            </div>
+                            <div class="d-flex">
+                                <button class="me-auto">cancel</button>
+                                <button class="ms-auto">save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer py-5">
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">Logo</h3>
+                    <h3 class="mt-5">Address: 2972 <br> Westheimer Rd. Santa <br> Ana, Illinois 85486</h3>
+                    <h3>Call Us: (405) 555-0128</h3>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">Resources</h3>
+                    <h3 class="mt-5">About</h3>
+                    <h3>Contact us</h3>
+                    <h3>help center</h3>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">legal</h3>
+                    <h3 class="mt-5">term of use</h3>
+                    <h3>privacy policy</h3>
+                    <h3>security</h3>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">account</h3>
+                    <h3 class="mt-5">my account</h3>
+                    <h3>collections</h3>
+                    <h3>user guide</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.single').click(function(){
+            $('.target').hide();
+            $('#div'+$(this).attr('target')).show();
+        })
+    </script>
+</body>
+</html>

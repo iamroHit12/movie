@@ -1,0 +1,304 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(10, 14, 23, 0.8);
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: rgb(0, 0, 0,50%);
+}
+
+.nav-link,.navbar-brand{
+    font-size: 24px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.navbar-brand:hover{
+    color: #FFFFFF;
+}
+
+.nav-link:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #951B1B;
+    transition: 1s;
+}
+
+.signup{
+    background: #951B1B;
+    border-radius: 20px;
+}
+
+.slide img{
+    width: 100%;
+    height: 853px;
+}
+
+.theater_header h1{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+.theater_header h3{
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.tv_header h1{
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+.tv_header h3{
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.navigator{
+    width: 100%;
+    background-color: rgb(10,14,23,0.5);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigator h3{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 0;
+}
+
+.single{
+    white-space: nowrap;
+    width: fit-content;
+}
+.tv_single{
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.moviesCard{
+    width: fit-content;
+    height: max-content;
+}
+
+.moviesCard img{
+    width: 100%;
+    height: 250px;
+}
+
+.moviesCard_foot{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot{
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.moviesCard button{
+    background-color: #951B1B;
+    border-radius: 20px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.moviesCard h3{
+    color: #FFFFFF;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.moviesCard h5{
+    color: #FFFFFF;
+}
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    background: rgb(10,14,23,0.5);
+}
+
+.footer h3{
+    font-size: 24px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.footer_title{
+    font-weight: bold;
+}
+
+.swiper-button-prev,.swiper-button-next{
+    color: #FFFFFF;
+    font-size: 4vw;
+    font-weight: bold;
+    transition: transform 0.1s ease-out;
+}
+
+@media (max-width:1200px){
+    .nav-link,.navbar-brand{
+        font-size: 21px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+
+    .theater_header h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 21px;
+    }
+
+    .tv_header h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 21px;
+    }
+    .navigator h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 21px;
+    }
+
+    .moviesCard h3{
+        color: #FFFFFF;
+        font-size: 21px;
+        text-transform: capitalize;
+    }
+
+    .footer h3{
+        font-size: 21px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+
+    .moviesCard button{
+        font-size: 21px;
+    }
+}
+
+@media (max-width:992px){
+    .nav-link,.navbar-brand{
+        font-size: 15px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+}
+
+@media (max-width:768px){
+    .nav-link,.navbar-brand{
+        font-size: 18px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+
+    .theater_header h1{
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-size: 36px;
+    }
+
+    .theater_header h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
+
+    .tv_header h1{
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-size: 36px;
+    }
+    
+    .tv_header h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
+    .navigator h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .moviesCard h3{
+        color: #FFFFFF;
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+
+    .footer h3{
+        font-size: 18px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+
+    .moviesCard button{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:576px){
+    .theater_header h1{
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-size: 28px;
+    }
+
+    .theater_header h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 12px;
+    }
+
+    .tv_header h1{
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-size: 28px;
+    }
+    
+    .tv_header h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 12px;
+    }
+
+    .navigator h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .moviesCard h3{
+        color: #FFFFFF;
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+
+    .footer h3{
+        font-size: 12px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+}

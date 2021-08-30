@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-expand-md fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">LOGO</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">movies</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">about us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">help</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">login</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <button class="btn px-3 shadow-none nav-link signup">sign up</button>
+                    </li>
+                </ul>
+            </div>
+            <button class="shadow-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="swiper landing">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide slide">
+                <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+            </div>
+            <!-- <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div> -->
+        </div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="theater mt-5">
+        <div class="container">
+            <div class="d-flex theater_header">
+                <h1 class="me-auto">in theater</h1>
+                <h3 class="ms-auto">view all <i class="fa fa-chevron-right"></i></h3>
+            </div>
+        </div>
+        <div class="navigator row no-gutters py-3 px-3 mt-3">
+            <h3 target="1" class="single">popular</h3>
+            <h3 target="2" class="single">comming soon</h3>
+            <h3 target="3" class="single">top rated</h3>
+            <h3 target="4" class="single">most reviewed</h3>
+        </div>
+        <div class="content mt-5">
+            <div class="target" id="div1">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="moviesCard_foot row no-gutters mt-3">
+                                        <div class="foot">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="moviesCard_foot row no-gutters mt-3">
+                                        <div class="foot">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="target" id="div2">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="target" id="div3">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="target" id="div4">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tv mt-5">
+        <div class="container">
+            <div class="d-flex tv_header">
+                <h1 class="me-auto">on tv</h1>
+                <h3 class="ms-auto">view all <i class="fa fa-chevron-right"></i></h3>
+            </div>
+        </div>
+        <div class="navigator row no-gutters py-3 px-3 mt-3">
+            <h3 target="1" class="tv_single">popular</h3>
+            <h3 target="2" class="tv_single">comming soon</h3>
+            <h3 target="3" class="tv_single">top rated</h3>
+            <h3 target="4" class="tv_single">most reviewed</h3>
+        </div>
+        <div class="content mt-5">
+            <div class="tv_target" id="Tvdiv1">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tv_target" id="Tvdiv2">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="moviesCard_foot row no-gutters mt-3">
+                                        <div class="foot">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="moviesCard">
+                                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                    <div class="moviesCard_foot row no-gutters mt-3">
+                                        <div class="foot">
+                                            <h3>interstellar</h3>
+                                            <h5>
+                                                <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                </svg>
+                                                8.1/10
+                                            </h5>
+                                        </div>
+                                        <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tv_target" id="Tvdiv3">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tv_target" id="Tvdiv4">
+                <div class="container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="swiper-slide">
+                                  <div class="moviesCard">
+                                      <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                      <div class="moviesCard_foot row no-gutters mt-3">
+                                          <div class="foot">
+                                              <h3>interstellar</h3>
+                                              <h5>
+                                                  <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                  </svg>
+                                                  8.1/10
+                                              </h5>
+                                          </div>
+                                          <button class="btn foot ms-auto shadow-none related_btn">read more</button>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer py-5">
+        <div class="row">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">Logo</h3>
+                    <h3 class="mt-5">Address: 2972 <br> Westheimer Rd. Santa <br> Ana, Illinois 85486</h3>
+                    <h3>Call Us: (405) 555-0128</h3>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">Resources</h3>
+                    <h3 class="mt-5">About</h3>
+                    <h3>Contact us</h3>
+                    <h3>help center</h3>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">legal</h3>
+                    <h3 class="mt-5">term of use</h3>
+                    <h3>privacy policy</h3>
+                    <h3>security</h3>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <div>
+                    <h3 class="footer_title">account</h3>
+                    <h3 class="mt-5">my account</h3>
+                    <h3>collections</h3>
+                    <h3>user guide</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $('.single').click(function(){
+            console.log('clicked')
+            $('.target').hide();
+            $('#div'+$(this).attr('target')).show();
+        })
+
+        $('.tv_single').click(function(){
+            console.log('clicked')
+            $('.tv_target').hide();
+            $('#Tvdiv'+$(this).attr('target')).show();
+        })
+
+        const swiper = new Swiper('.swiper', {
+            spaceBetween:5,
+            slidesPerView:1,
+            autoHeight:true,
+            freeMode:true,
+            loop: true,
+            speed:500,
+
+            breakpoints: {
+                576:{
+                    slidesPerView:4
+                }
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const swipers = new Swiper('.landing', {
+            slidesPerView:1,
+            spaceBetween:5,
+            autoHeight:true,
+            loop: true,
+            speed: 500,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

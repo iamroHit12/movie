@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./read.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/read.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-expand-md fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">LOGO</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">movies</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">about us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">help</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">login</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <button class="btn px-3 shadow-none nav-link signup">sign up</button>
+                    </li>
+                </ul>
+            </div>
+            <button class="shadow-none navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container mt-5 mb-5">
+        <div class="header d-md-flex">
+            <div class="me-auto">
+                <span class="title">the walk</span>
+                <span class="rate mx-4">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                    </svg>
+                    9.0/10
+                </span>
+            </div>
+            <div class="mt-3 mt-md-0 ms-auto">
+                <span class="fav">
+                    <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M34.6196 47.9348L32.6889 46.0191C25.8315 39.2418 21.3043 34.772 21.3043 29.2862C21.3043 24.8164 24.5266 21.3044 28.6277 21.3044C30.9446 21.3044 33.1682 22.4799 34.6196 24.3375C36.0709 22.4799 38.2946 21.3044 40.6114 21.3044C44.7125 21.3044 47.9348 24.8164 47.9348 29.2862C47.9348 34.772 43.4076 39.2418 36.5503 46.0336L34.6196 47.9348Z" fill="#951B1B"/>
+                        <circle cx="34.2391" cy="34.2391" r="30.2391" stroke="#951B1B" stroke-width="8"/>
+                    </svg>
+                    add to favourite   
+                </span>
+                <span class="share mx-4">
+                    <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                        <path d="M44.2572 40.8883C43.1329 40.8883 42.1268 41.2894 41.3575 41.9177L30.8089 36.3697C30.8828 36.0622 30.942 35.7548 30.942 35.4339C30.942 35.1131 30.8828 34.8056 30.8089 34.4981L41.2391 29.0036C42.038 29.672 43.0885 30.0864 44.2572 30.0864C46.7132 30.0864 48.6957 28.295 48.6957 26.0758C48.6957 23.8566 46.7132 22.0652 44.2572 22.0652C41.8013 22.0652 39.8188 23.8566 39.8188 26.0758C39.8188 26.3967 39.878 26.7042 39.952 27.0116L29.5217 32.5062C28.7228 31.8377 27.6724 31.4233 26.5036 31.4233C24.0477 31.4233 22.0652 33.2147 22.0652 35.4339C22.0652 37.6531 24.0477 39.4445 26.5036 39.4445C27.6724 39.4445 28.7228 39.0301 29.5217 38.3617L40.0556 43.923C39.9816 44.2038 39.9372 44.4979 39.9372 44.792C39.9372 46.9444 41.8753 48.6957 44.2572 48.6957C46.6392 48.6957 48.5773 46.9444 48.5773 44.792C48.5773 42.6396 46.6392 40.8883 44.2572 40.8883Z" fill="#951B1B"/>
+                        <circle cx="35" cy="35" r="30.2391" stroke="#951B1B" stroke-width="8"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="70" height="70" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    share
+                </span>
+            </div>
+        </div>
+        <div class="body row mt-5">
+            <div class="col-md-4">
+                <img class="pic" src="https://m.economictimes.com/thumb/msid-81950122,width-1200,height-900,resizemode-4,imgsize-626060/the-season-11-will-launch-with-eight-episodes-and-will-feature-total-24-episodes-.jpg" alt="">
+            </div>
+            <div class="col-md-8">
+                <div class="navigator row no-gutters py-3 px-3 mt-5 mt-md-0 m-0">
+                    <h3 target="1" id="over" class="single">overview</h3>
+                    <h3 target="2" id="rev" class="single">review</h3>
+                    <h3 target="3" id="write" class="single">write review</h3>
+                    <h3 target="4" id="rel" class="single">related movies</h3>
+                </div>
+                <div class="content mt-5">
+                    <div class="target" id="div1">
+                        <div class="container">
+                            <p class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                        </div>
+                        <div class="d-flex mt-5">
+                            <h3 class="me-auto">videos & photo</h3>
+                            <h3 class="ms-auto">view all <i class="fa fa-chevron-right"></i></h3>
+                        </div>
+                        <div class="hr"></div>
+                        <div class="videoPhoto row mt-3">
+                            <img class="col-md-3" src="https://m.economictimes.com/thumb/msid-81950122,width-1200,height-900,resizemode-4,imgsize-626060/the-season-11-will-launch-with-eight-episodes-and-will-feature-total-24-episodes-.jpg" alt="">
+                            <img class="col-md-3" src="https://m.economictimes.com/thumb/msid-81950122,width-1200,height-900,resizemode-4,imgsize-626060/the-season-11-will-launch-with-eight-episodes-and-will-feature-total-24-episodes-.jpg" alt="">
+                            <img class="col-md-3" src="https://m.economictimes.com/thumb/msid-81950122,width-1200,height-900,resizemode-4,imgsize-626060/the-season-11-will-launch-with-eight-episodes-and-will-feature-total-24-episodes-.jpg" alt="">
+                            <img class="col-md-3" src="https://m.economictimes.com/thumb/msid-81950122,width-1200,height-900,resizemode-4,imgsize-626060/the-season-11-will-launch-with-eight-episodes-and-will-feature-total-24-episodes-.jpg" alt="">
+                        </div>
+                        <div class="hr mt-5"></div>
+                        <div class="detail d-flex mt-2">
+                            <div class="me-auto">
+                                <div>
+                                    <h3 class="de_title">director:</h3>
+                                    <h3 class="de_subtitle">Arlene McCoy, Jerome Bell</h3>
+                                </div>
+                                <div>
+                                    <h3 class="de_title">writer:</h3>
+                                    <h3 class="de_subtitle">Jenny Wilson</h3>
+                                </div>
+                                <div>
+                                    <h3 class="de_title">stars:</h3>
+                                    <h3 class="de_subtitle">Floyd Miles, Dianne Russell,Darrell Steward, Ronald Richards</h3>
+                                </div>
+                            </div>
+                            <div class="ms-auto">
+                                <div>
+                                    <h3 class="de_title">genre:</h3>
+                                    <h3 class="de_subtitle">Action, Thriller, Suspense</h3>
+                                </div>
+                                <div>
+                                    <h3 class="de_title">release date:</h3>
+                                    <h3 class="de_subtitle">13 March 2019</h3>
+                                </div>
+                                <div>
+                                    <h3 class="de_title">run time:</h3>
+                                    <h3 class="de_subtitle">141 Min</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="target" id="div2">
+                        <div class="mt-3">
+                                <div class="found p-2 d-flex mb-3">
+                                    <div class="me-auto d-flex"><h3>found</h3><h3 class="mx-2" style="color: #951B1B;">30 reviews</h3></div>
+                                    <div class="ms-auto d-flex">
+                                        <h3>filter by:</h3>
+                                        <div class="dropdown mx-2">
+                                            <button class="btn d-flex" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                              <h3>popularity</h3><i class="fa fa-chevron-down mt-2 ms-2"></i>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                              <li><a class="dropdown-item" href="#">Action</a></li>
+                                            </ul>
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="review d-md-flex">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1200px-Circle-icons-profile.svg.png" alt="">
+                                    </div>
+                                    <div class="mt-3 mt-md-0 mx-md-5">
+                                        <h3>eleanor pena</h3>
+                                        <svg width="347" height="30" viewBox="0 0 347 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                            <path d="M50 20.0875L57.725 24.75L55.675 15.9625L62.5 10.05L53.5125 9.2875L50 1L46.4875 9.2875L37.5 10.05L44.325 15.9625L42.275 24.75L50 20.0875Z" fill="#FFB800"/>
+                                            <path d="M85 20.0875L92.725 24.75L90.675 15.9625L97.5 10.05L88.5125 9.2875L85 1L81.4875 9.2875L72.5 10.05L79.325 15.9625L77.275 24.75L85 20.0875Z" fill="#FFB800"/>
+                                            <path d="M120 20.0875L127.725 24.75L125.675 15.9625L132.5 10.05L123.513 9.2875L120 1L116.488 9.2875L107.5 10.05L114.325 15.9625L112.275 24.75L120 20.0875Z" fill="#FFB800"/>
+                                            <path d="M155 20.0875L162.725 24.75L160.675 15.9625L167.5 10.05L158.513 9.2875L155 1L151.488 9.2875L142.5 10.05L149.325 15.9625L147.275 24.75L155 20.0875Z" fill="#FFB800"/>
+                                            <path d="M190 20.0875L197.725 24.75L195.675 15.9625L202.5 10.05L193.513 9.2875L190 1L186.488 9.2875L177.5 10.05L184.325 15.9625L182.275 24.75L190 20.0875Z" fill="#FFB800"/>
+                                            <path d="M225 20.0875L232.725 24.75L230.675 15.9625L237.5 10.05L228.513 9.2875L225 1L221.488 9.2875L212.5 10.05L219.325 15.9625L217.275 24.75L225 20.0875Z" fill="#FFB800"/>
+                                            <path d="M260 20.0875L267.725 24.75L265.675 15.9625L272.5 10.05L263.513 9.2875L260 1L256.488 9.2875L247.5 10.05L254.325 15.9625L252.275 24.75L260 20.0875Z" fill="#FFB800"/>
+                                            <path d="M297 20.0875L304.725 24.75L302.675 15.9625L309.5 10.05L300.513 9.2875L297 1L293.488 9.2875L284.5 10.05L291.325 15.9625L289.275 24.75L297 20.0875Z" fill="#FFB800"/>
+                                            <path d="M332 20.0875L339.725 24.75L337.675 15.9625L344.5 10.05L335.513 9.2875L332 1L328.488 9.2875L319.5 10.05L326.325 15.9625L324.275 24.75L332 20.0875Z" fill="white"/>
+                                        </svg>
+                                        <h3>March 23, 2021</h3>
+                                    </div>
+                                </div>
+                                <p class="text mt-3">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                                <div class="hr mt-2"></div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="review d-md-flex">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1200px-Circle-icons-profile.svg.png" alt="">
+                                    </div>
+                                    <div class="mt-3 mt-md-0 mx-md-5">
+                                        <h3>eleanor pena</h3>
+                                        <svg width="347" height="30" viewBox="0 0 347 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                            <path d="M50 20.0875L57.725 24.75L55.675 15.9625L62.5 10.05L53.5125 9.2875L50 1L46.4875 9.2875L37.5 10.05L44.325 15.9625L42.275 24.75L50 20.0875Z" fill="#FFB800"/>
+                                            <path d="M85 20.0875L92.725 24.75L90.675 15.9625L97.5 10.05L88.5125 9.2875L85 1L81.4875 9.2875L72.5 10.05L79.325 15.9625L77.275 24.75L85 20.0875Z" fill="#FFB800"/>
+                                            <path d="M120 20.0875L127.725 24.75L125.675 15.9625L132.5 10.05L123.513 9.2875L120 1L116.488 9.2875L107.5 10.05L114.325 15.9625L112.275 24.75L120 20.0875Z" fill="#FFB800"/>
+                                            <path d="M155 20.0875L162.725 24.75L160.675 15.9625L167.5 10.05L158.513 9.2875L155 1L151.488 9.2875L142.5 10.05L149.325 15.9625L147.275 24.75L155 20.0875Z" fill="#FFB800"/>
+                                            <path d="M190 20.0875L197.725 24.75L195.675 15.9625L202.5 10.05L193.513 9.2875L190 1L186.488 9.2875L177.5 10.05L184.325 15.9625L182.275 24.75L190 20.0875Z" fill="#FFB800"/>
+                                            <path d="M225 20.0875L232.725 24.75L230.675 15.9625L237.5 10.05L228.513 9.2875L225 1L221.488 9.2875L212.5 10.05L219.325 15.9625L217.275 24.75L225 20.0875Z" fill="#FFB800"/>
+                                            <path d="M260 20.0875L267.725 24.75L265.675 15.9625L272.5 10.05L263.513 9.2875L260 1L256.488 9.2875L247.5 10.05L254.325 15.9625L252.275 24.75L260 20.0875Z" fill="#FFB800"/>
+                                            <path d="M297 20.0875L304.725 24.75L302.675 15.9625L309.5 10.05L300.513 9.2875L297 1L293.488 9.2875L284.5 10.05L291.325 15.9625L289.275 24.75L297 20.0875Z" fill="#FFB800"/>
+                                            <path d="M332 20.0875L339.725 24.75L337.675 15.9625L344.5 10.05L335.513 9.2875L332 1L328.488 9.2875L319.5 10.05L326.325 15.9625L324.275 24.75L332 20.0875Z" fill="white"/>
+                                        </svg>
+                                        <h3>March 23, 2021</h3>
+                                    </div>
+                                </div>
+                                <p class="text mt-3">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                                <div class="hr mt-2"></div>
+                            </div>
+                    </div>
+                    <div class="target" id="div3">
+                        <div class="write">
+                            <div class="px-4"><h3>your rating</h3></div>
+                            <div class="yourRating d-flex mt-3 px-3">
+                                <i class="me-auto">
+                                    <svg height="30" viewBox="0 0 347 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                        <path d="M50 20.0875L57.725 24.75L55.675 15.9625L62.5 10.05L53.5125 9.2875L50 1L46.4875 9.2875L37.5 10.05L44.325 15.9625L42.275 24.75L50 20.0875Z" fill="#FFB800"/>
+                                        <path d="M85 20.0875L92.725 24.75L90.675 15.9625L97.5 10.05L88.5125 9.2875L85 1L81.4875 9.2875L72.5 10.05L79.325 15.9625L77.275 24.75L85 20.0875Z" fill="#FFB800"/>
+                                        <path d="M120 20.0875L127.725 24.75L125.675 15.9625L132.5 10.05L123.513 9.2875L120 1L116.488 9.2875L107.5 10.05L114.325 15.9625L112.275 24.75L120 20.0875Z" fill="#FFB800"/>
+                                        <path d="M155 20.0875L162.725 24.75L160.675 15.9625L167.5 10.05L158.513 9.2875L155 1L151.488 9.2875L142.5 10.05L149.325 15.9625L147.275 24.75L155 20.0875Z" fill="#FFB800"/>
+                                        <path d="M190 20.0875L197.725 24.75L195.675 15.9625L202.5 10.05L193.513 9.2875L190 1L186.488 9.2875L177.5 10.05L184.325 15.9625L182.275 24.75L190 20.0875Z" fill="#FFB800"/>
+                                        <path d="M225 20.0875L232.725 24.75L230.675 15.9625L237.5 10.05L228.513 9.2875L225 1L221.488 9.2875L212.5 10.05L219.325 15.9625L217.275 24.75L225 20.0875Z" fill="#FFB800"/>
+                                        <path d="M260 20.0875L267.725 24.75L265.675 15.9625L272.5 10.05L263.513 9.2875L260 1L256.488 9.2875L247.5 10.05L254.325 15.9625L252.275 24.75L260 20.0875Z" fill="#FFB800"/>
+                                        <path d="M297 20.0875L304.725 24.75L302.675 15.9625L309.5 10.05L300.513 9.2875L297 1L293.488 9.2875L284.5 10.05L291.325 15.9625L289.275 24.75L297 20.0875Z" fill="#FFB800"/>
+                                        <path d="M332 20.0875L339.725 24.75L337.675 15.9625L344.5 10.05L335.513 9.2875L332 1L328.488 9.2875L319.5 10.05L326.325 15.9625L324.275 24.75L332 20.0875Z" fill="white"/>
+                                    </svg>    
+                                </i>
+                                <span class="ms-auto">9</span>
+                            </div>
+                            <div class="mt-3 px-4"><h3>you rated this 9/10</h3></div>
+                            <div class="mt-4 mt-md-5 px-4"><h3>your review</h3></div>
+                            <input class="form-control mt-3 headline" type="text" placeholder="Write a headline of your review" />
+                            <textarea class="form-control mt-3 review_body" cols="30" rows="10"></textarea>
+                            <div class="d-flex mt-3 px-4">
+                                <h3 class="me-auto">Does this review contain spoiler ?</h3>
+                                <div class="d-flex ms-auto">
+                                    <div class="form-check" style="color: #FFFFFF;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                          Yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check ms-3" style="color: #FFFFFF;">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                          No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-3"><button class="mx-auto submit">submit</button></div>
+                        </div>
+                    </div>
+                    <div class="target" id="div4">
+                        <div class="container">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <div class="moviesCard">
+                                        <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                        <div class="d-flex mt-3">
+                                            <div class="me-auto">
+                                                <h3>interstellar</h3>
+                                                <h5>
+                                                    <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                    </svg>
+                                                    8.1/10
+                                                </h5>
+                                            </div>
+                                            <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="moviesCard">
+                                        <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                        <div class="d-flex mt-3">
+                                            <div class="me-auto">
+                                                <h3>interstellar</h3>
+                                                <h5>
+                                                    <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                    </svg>
+                                                    8.1/10
+                                                </h5>
+                                            </div>
+                                            <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <div class="moviesCard">
+                                        <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                        <div class="d-flex mt-3">
+                                            <div class="me-auto">
+                                                <h3>interstellar</h3>
+                                                <h5>
+                                                    <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                    </svg>
+                                                    8.1/10
+                                                </h5>
+                                            </div>
+                                            <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="moviesCard">
+                                        <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                        <div class="d-flex mt-3">
+                                            <div class="me-auto">
+                                                <h3>interstellar</h3>
+                                                <h5>
+                                                    <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                    </svg>
+                                                    8.1/10
+                                                </h5>
+                                            </div>
+                                            <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <div class="moviesCard">
+                                        <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                        <div class="d-flex mt-3">
+                                            <div class="me-auto">
+                                                <h3>interstellar</h3>
+                                                <h5>
+                                                    <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                    </svg>
+                                                    8.1/10
+                                                </h5>
+                                            </div>
+                                            <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="moviesCard">
+                                        <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/interstellar-et00019066-19-02-2021-02-25-12.jpg" alt="">
+                                        <div class="d-flex mt-3">
+                                            <div class="me-auto">
+                                                <h3>interstellar</h3>
+                                                <h5>
+                                                    <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 20.0875L22.725 24.75L20.675 15.9625L27.5 10.05L18.5125 9.2875L15 1L11.4875 9.2875L2.5 10.05L9.325 15.9625L7.275 24.75L15 20.0875Z" fill="#FFB800"/>
+                                                    </svg>
+                                                    8.1/10
+                                                </h5>
+                                            </div>
+                                            <button class="btn ms-auto shadow-none related_btn">read more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer py-5">
+        <div class="d-flex">
+            <div class="mx-auto">
+                <h3 class="footer_title">Logo</h3>
+                <h3 class="mt-5">Address: 2972 <br> Westheimer Rd. Santa <br> Ana, Illinois 85486</h3>
+                <h3>Call Us: (405) 555-0128</h3>
+            </div>
+            <div class="mx-auto">
+                <h3 class="footer_title">Resources</h3>
+                <h3 class="mt-5">About</h3>
+                <h3>Contact us</h3>
+                <h3>help center</h3>
+            </div>
+            <div class="mx-auto">
+                <h3 class="footer_title">legal</h3>
+                <h3 class="mt-5">term of use</h3>
+                <h3>privacy policy</h3>
+                <h3>security</h3>
+            </div>
+            <div class="mx-auto">
+                <h3 class="footer_title">account</h3>
+                <h3 class="mt-5">my account</h3>
+                <h3>collections</h3>
+                <h3>user guide</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.single').click(function(){
+            $('.target').hide();
+            $('#div'+$(this).attr('target')).show();
+        })
+    </script>
+</body>
+</html>

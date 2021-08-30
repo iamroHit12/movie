@@ -1,0 +1,429 @@
+body{
+    background-color: rgba(10, 14, 23, 0.8)
+}
+
+nav{
+    background-color: rgb(0, 0, 0,50%);
+}
+
+.nav-link,.navbar-brand{
+    font-size: 24px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.navbar-brand:hover{
+    color: #FFFFFF;
+}
+
+.nav-link:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #951B1B;
+    transition: 1s;
+}
+
+.signup{
+    background: #951B1B;
+    border-radius: 20px;
+}
+
+.header{
+    width: 100%;
+}
+
+.header .title{
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.rate,.fav,.share{
+    font-size: 24px;
+    font-style: normal;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.fav svg,.share svg{
+    width: 70px;
+    height: 70px;
+}
+
+.pic{
+    width: 100%;
+    height: 525px;
+    border-radius: 20px;
+}
+
+.navigator{
+    width: 100%;
+    background-color: rgb(10,14,23,0.5);
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.content{
+    width: 100%;
+}
+
+.navigator h3{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 0;
+}
+
+.single{
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.text{
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.hr{
+    border: 3px solid #951B1B;
+    background-color: #951B1B;
+}
+
+.target h3{
+    text-transform: capitalize;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.de_title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.de_subtitle{
+    font-size: 24px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.moviesCard{
+    width: 100%;
+    height: max-content;
+}
+
+.moviesCard img{
+    width: 100%;
+    height: 250px;
+}
+
+.moviesCard button{
+    width: 173px;
+    height: 51px;
+    background-color: #951B1B;
+    border-radius: 20px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.moviesCard h5{
+    color: #FFFFFF;
+}
+
+.yourRating{
+    width: 100%;
+    height: 84px;
+    background-color: rgb(10,14,23,0.5);
+    border: 2px solid #951B1B;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.yourRating svg{
+    width: 100%;
+}
+
+.yourRating span{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.headline{
+    width: 100%;
+    height: 84px;
+    background: rgb(10,14,23,0.5);
+    border: 2px solid #951B1B;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.review_body{
+    width: 100%;
+    background: rgb(10,14,23,0.5);
+    border: 2px solid #951B1B;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.found{
+    background: rgb(10,14,23,0.5);
+    border: 2px solid #951B1B;
+}
+
+.dropdown button,.dropdown button:hover{
+    width: max-content;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-top: -12px;
+    text-transform: capitalize;
+}
+
+.submit{
+    width: 173px;
+    height: 51px;
+    background-color: #951B1B;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.review img{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+}
+
+.footer{
+    background: rgb(10,14,23,0.5);
+}
+
+.footer h3{
+    font-size: 24px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.footer_title{
+    font-weight: bold;
+}
+
+@media (max-width:1200px){
+    .nav-link,.navbar-brand{
+        font-size: 21px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+
+    .rate,.fav,.share{
+        font-size: 21px;
+        font-style: normal;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+    .fav svg,.share svg{
+        width: 60px;
+        height: 60px;
+    }
+    .navigator h3{
+        font-size: 21px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    .text{
+        font-size: 21px;
+        color: #FFFFFF;
+    }
+
+    .de_title{
+        font-size: 21px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .de_subtitle{
+        font-size: 21px;
+        font-weight: normal;
+        color: #FFFFFF;
+    }
+
+    .yourRating span{
+        color: #FFFFFF;
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .yourRating,.headline{
+        height: 65px;
+        font-size: 21px;
+    }
+}
+
+@media (max-width:992px){
+    .nav-link,.navbar-brand{
+        font-size: 15px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+    .navigator h3{
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    .text{
+        font-size: 15px;
+        color: #FFFFFF;
+    }
+
+    .yourRating,.headline{
+        height: 55px;
+    }
+}
+
+@media (max-width:768px){
+    .nav-link,.navbar-brand{
+        font-size: 18px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+
+    .header .title{
+        font-size: 36px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .rate,.fav,.share{
+        font-size: 18px;
+        font-style: normal;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+
+    .navigator h3{
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .target h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
+
+    .de_title{
+        font-size: 18px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .de_subtitle{
+        font-size: 18px;
+        font-weight: normal;
+        color: #FFFFFF;
+    }
+
+    .yourRating span{
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .yourRating,.headline{
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .footer h3{
+        font-size: 18px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+
+    .text{
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+}
+
+@media (max-width:576px){
+    .header .title{
+        font-size: 28px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .rate,.fav,.share{
+        font-size: 12px;
+        font-style: normal;
+        text-transform: capitalize;
+        color: #FFFFFF;
+    }
+    .fav svg,.share svg{
+        width: 40px;
+        height: 40px;
+    }
+    .navigator h3{
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .text{
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+
+    .target h3{
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-size: 12px;
+    }
+
+    .de_title{
+        font-size: 12px;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+    .de_subtitle{
+        font-size: 12px;
+        font-weight: normal;
+        color: #FFFFFF;
+    }
+    .yourRating span{
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .yourRating,.headline{
+        height: 35px;
+        font-size: 12px;
+    }
+    .footer h3{
+        font-size: 12px;
+        color: #FFFFFF;
+        text-transform: capitalize;
+    }
+}
