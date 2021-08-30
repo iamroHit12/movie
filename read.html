@@ -398,16 +398,13 @@
     </div>
 
     <script>
-        $('.single').click(function(){
-            $('.target').hide();
-            $('#div'+$(this).attr('target')).show();
-        })
-
         $( document ).ready(function() {
             $('.target').hide();
             $('#div1').show();
 
             $('.single').click(function(){
+                $('.target').hide();
+                $('#div'+$(this).attr('target')).show();
                 $(this).toggleClass('active').siblings().removeClass('active');
             })
         });

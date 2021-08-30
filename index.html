@@ -520,32 +520,22 @@
 
 
     <script>
-        $('.single').click(function(){
-            console.log('clicked')
-            $('.target').hide();
-            $('#div'+$(this).attr('target')).show();
-        })
-
-        $('.tv_single').click(function(){
-            console.log('clicked')
-            $('.tv_target').hide();
-            $('#Tvdiv'+$(this).attr('target')).show();
-        })
-
         $( document ).ready(function() {
             $('.target').hide();
             $('#div1').show();
 
             $('.single').click(function(){
+                $('.target').hide();
+                $('#div'+$(this).attr('target')).show();
                 $(this).toggleClass('active').siblings().removeClass('active');
             })
-        });
 
-        $( document ).ready(function() {
             $('.tv_target').hide();
             $('#Tvdiv1').show();
 
             $('.tv_single').click(function(){
+                $('.tv_target').hide();
+                $('#Tvdiv'+$(this).attr('target')).show();
                 $(this).toggleClass('active').siblings().removeClass('active');
             })
         });
