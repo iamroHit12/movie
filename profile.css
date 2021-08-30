@@ -58,6 +58,10 @@ nav{
     width: fit-content;
 }
 
+.active{
+    border-bottom: 2px solid #951B1B;
+}
+
 .content{
     width: 100%;
     color: #FFFFFF;
