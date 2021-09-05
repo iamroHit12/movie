@@ -63,3 +63,7 @@ h5:after {
 .google{
     font-weight: bold;
 }
+nav{
+    height: 40px;
+   background-color: rgba(10, 14, 23, 0.8);
+}

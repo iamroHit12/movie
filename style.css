@@ -9,6 +9,10 @@ a{
     color: #FFFFFF;
 }
 
+ .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 24px;
+    }
+
 a:hover{
     text-decoration: none;
     color: #FFFFFF;
@@ -48,7 +52,10 @@ nav{
 
 .slide img{
     width: 100%;
-    height: 853px;
+    height:90vh;
+}
+.landing{
+    height: 90vh;
 }
 
 .theater_header h1{
@@ -222,6 +229,18 @@ nav{
 }
 
 @media (max-width:768px){
+
+    .slide img{
+    width: 100%;
+    height:50vh;
+}
+.landing{
+    height: 50vh;
+}
+
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 20px;
+    }
     .nav-link,.navbar-brand{
         font-size: 18px;
         color: #FFFFFF;

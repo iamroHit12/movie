@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/signup.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./signup.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="signup_wrapper container">
+    <nav class="text-white p-1">
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none">
+                <g id="keyboard_backspace_24px">
+                    <path id="icon/hardware/keyboard_backspace_24px" d="M19.7912 10.995H6.62124L9.50124 8.11499C9.89124 7.72499 9.89124 7.09499 9.50124 6.70499C9.31441
+                                 6.51774 9.06076 6.41251 8.79624 6.41251C8.53172 6.41251 8.27807 6.51774 8.09124 6.70499L3.50124 11.295C3.11124 
+                                 11.685 3.11124 12.315 3.50124 12.705L8.09124 17.295C8.48124 17.685 9.11124 17.685 9.50124 17.295C9.89124 16.905
+                                  9.89124 16.275 9.50124 15.885L6.62124 12.995H19.7912C20.3412 12.995 20.7912 12.545 20.7912 11.995C20.7912 11.445
+                                   20.3412 10.995 19.7912 10.995Z" fill="white" />
+                </g>
+            </svg>
+        </a>
+    </nav>
+    <div class="signup_wrapper ">
         <div class="signup">
-            <div class="d-flex"><h3 class="mx-auto">sign up</h3></div>
+            <div class="d-flex">
+                <h3 class="mx-auto">Sign Up</h3>
+            </div>
             <form class="mt-5">
                 <div class="mb-3">
-                    <label class="form-label">Email address*</label>
-                    <input type="email" class="input form-control" placeholder="Email address">
+                    <label class="form-label">Username*</label>
+                    <input type="email" class="input form-control" placeholder="Username">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">create password*</label>
@@ -42,4 +62,5 @@
         </div>
     </div>
 </body>
+
 </html>

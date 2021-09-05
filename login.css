@@ -11,8 +11,12 @@
 
 .login{
     width: 426px;
-}
 
+}
+nav{
+    height: 40px;
+   background-color: rgba(10, 14, 23, 0.8);
+}
 .login h3{
     font-size: 48px;
     font-weight: bold;
