@@ -94,8 +94,6 @@ nav{
 }
 
 .moviesCard button{
-    width: 173px;
-    height: 51px;
     background-color: #951B1B;
     border-radius: 20px;
     color: #FFFFFF;
@@ -248,6 +246,10 @@ form button{
         border-radius: 50%;
     }
 
+    .moviesCard button{
+        font-size: 21px;
+    }
+
     .form-control{
         height: 65px;
         background: rgba(149, 27, 27, 0.2);
@@ -346,6 +348,10 @@ form button{
         color: #FFFFFF;
     }
 
+    .moviesCard button{
+        font-size: 18px;
+    }
+
     .footer h3{
         font-size: 18px;
         color: #FFFFFF;
@@ -400,6 +406,10 @@ form button{
         background: rgba(149, 27, 27, 0.2);
         border: none;
         border-radius: 20px;
+    }
+
+    .moviesCard button{
+        font-size: 12px;
     }
 
     form button{

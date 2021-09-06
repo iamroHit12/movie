@@ -328,6 +328,10 @@ nav{
         text-transform: capitalize;
     }
 
+    .moviesCard button{
+        font-size: 12px;
+    }
+
     .footer h3{
         font-size: 12px;
         color: #FFFFFF;

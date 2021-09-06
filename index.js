@@ -22,9 +22,9 @@ $(document).ready(async function(){
             <img src=${'http://image.tmdb.org/t/p/original'+`${item.poster_path}`}
                 alt="">
             <div class="moviesCard_foot row no-gutters m-0">
-                <h3>${item.original_title}</h3>
+                <h3 class="mt-2 mt-sm-0">${item.original_title}</h3>
                 <div class="d-flex">
-                    <div class="d-flex justify-content-center align-items-center">
+                    <div class="me-auto d-flex justify-content-center align-items-center">
                         <h5>
                             <svg width="28" height="30" viewBox="0 0 28 30" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,9 @@ $(document).ready(async function(){
                             ${item.vote_average}
                         </h5>
                     </div>
-                    <button class="btn foot ms-auto shadow-none"><a href=${link1}>read more</a></button>
+                    <div class="ms-auto d-flex justify-content-center align-items-center">
+                        <button class="btn shadow-none"><a href=${link1}>read more</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,7 +59,7 @@ $(document).ready(async function(){
             <img src=${'http://image.tmdb.org/t/p/original'+`${item.poster_path}`}
                 alt="">
             <div class="moviesCard_foot row no-gutters m-0">
-                <h3>${item.original_title}</h3>
+                <h3 class="mt-2 mt-sm-0">${item.original_title}</h3>
                 <div class="d-flex">
                     <div class="d-flex justify-content-center align-items-center">
                         <h5>
@@ -70,7 +72,9 @@ $(document).ready(async function(){
                             ${item.vote_average}
                         </h5>
                     </div>
-                    <button class="btn foot ms-auto shadow-none"><a href=${link2}>read more</a></button>
+                    <div class="ms-auto d-flex justify-content-center align-items-center">
+                        <button class="btn shadow-none"><a href=${link2}>read more</a></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,7 +96,7 @@ $(document).ready(async function(){
             <img src=${'http://image.tmdb.org/t/p/original'+`${item.poster_path}`}
                 alt="">
             <div class="moviesCard_foot row no-gutters m-0">
-                <h3>${item.original_title}</h3>
+                <h3 class="mt-2 mt-sm-0">${item.original_title}</h3>
                 <div class="d-flex">
                     <div class="d-flex justify-content-center align-items-center">
                         <h5>
@@ -105,7 +109,9 @@ $(document).ready(async function(){
                             ${item.vote_average}
                         </h5>
                     </div>
-                    <button class="btn foot ms-auto shadow-none"><a href=${link3}>read more</a></button>
+                    <div class="ms-auto d-flex justify-content-center align-items-center">
+                        <button class="btn shadow-none"><a href=${link3}>read more</a></button>
+                    </div>
                 </div>
             </div>
         </div>

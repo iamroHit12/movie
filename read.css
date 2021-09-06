@@ -141,8 +141,6 @@ nav{
 }
 
 .moviesCard button{
-    width: 173px;
-    height: 51px;
     background-color: #951B1B;
     border-radius: 20px;
     color: #FFFFFF;
@@ -295,6 +293,10 @@ nav{
         height: 65px;
         font-size: 21px;
     }
+
+    .moviesCard button{
+        font-size: 21px;
+    }
 }
 
 @media (max-width:992px){
@@ -395,6 +397,10 @@ nav{
         font-size: 18px;
         color: #FFFFFF;
     }
+
+    .moviesCard button{
+        font-size: 18px;
+    }
 }
 
 @media (max-width:576px){
@@ -457,5 +463,9 @@ nav{
         font-size: 12px;
         color: #FFFFFF;
         text-transform: capitalize;
+    }
+
+    .moviesCard button{
+        font-size: 12px;
     }
 }
