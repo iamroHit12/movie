@@ -31,12 +31,12 @@ $(document).ready(async function(){
     $('#related_mName5').html(related.data.results[4].original_title)
     $('#related_mName6').html(related.data.results[5].original_title)
 
-    $('#related_rate1').html(related.data.results[0].vote_average)
-    $('#related_rate2').html(related.data.results[1].vote_average)
-    $('#related_rate3').html(related.data.results[2].vote_average)
-    $('#related_rate4').html(related.data.results[3].vote_average)
-    $('#related_rate5').html(related.data.results[4].vote_average)
-    $('#related_rate6').html(related.data.results[5].vote_average)
+    $('#related_rate1').html(related.data.results[0].vote_average.toFixed(1))
+    $('#related_rate2').html(related.data.results[1].vote_average.toFixed(1))
+    $('#related_rate3').html(related.data.results[2].vote_average.toFixed(1))
+    $('#related_rate4').html(related.data.results[3].vote_average.toFixed(1))
+    $('#related_rate5').html(related.data.results[4].vote_average.toFixed(1))
+    $('#related_rate6').html(related.data.results[5].vote_average.toFixed(1))
 
     $('#href1').attr('href',`/read.html?id=${related.data.results[0].id}`)
     $('#href2').attr('href',`/read.html?id=${related.data.results[1].id}`)
