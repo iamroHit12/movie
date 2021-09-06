@@ -5,14 +5,46 @@ $(document).ready(async function(){
     // header and overview
 
     var item = await axios.get(`https://api.themoviedb.org/3/movie/${movie_id}?api_key=403c1367f4654d78c7dc442cf20384a5&language=en-US`)
-
+    
     $('#title').html( item.data.original_title)
     $('#rate').html( item.data.vote_average)
     $('#pic').attr('src',`http://image.tmdb.org/t/p/original${item.data.poster_path}`)
     $('#overview_text').html(item.data.overview)
+    $('#release_date').html(item.data.release_date)
 
-    var photos = await axios.get(`https://api.themoviedb.org/3/movie/${movie_id}/images?api_key=403c1367f4654d78c7dc442cf20384a5&language=en-US&page=1`)
-    console.log(photos.data)
+    // genres
+    var genres = item.data.genres.map(genre=>{
+        return `${genre.name}, `
+    })
+
+    $('#genres').append(genres)
+
+    // runtime
+    $('#runtime').html(item.data.runtime+' '+'min')
+
+    // credits
+    var credits = await axios.get(`https://api.themoviedb.org/3/movie/${movie_id}/credits?api_key=403c1367f4654d78c7dc442cf20384a5&language=en-US&page=1`)
+    
+    // casts
+    var casts = credits.data.cast.slice(0,4).map(cast=>{
+        return `${cast.original_name}, `
+    })
+
+    $('#stars').append(casts)
+
+    //directors
+    var directors = credits.data.crew.filter(director=> director.job == 'Director').map(director=>{
+        return `${director.original_name}, `
+    })
+
+    $('#directors').append(directors)
+
+    //writer
+    var writers = credits.data.crew.filter(director=> director.job == 'Writer').map(director=>{
+        return `${director.original_name}, `
+    })
+
+    $('#writers').append(writers)
     // related movies
 
     var related = await axios.get(`https://api.themoviedb.org/3/movie/${movie_id}/similar?api_key=403c1367f4654d78c7dc442cf20384a5&language=en-US&page=1`);
