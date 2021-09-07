@@ -1,9 +1,17 @@
 $(document).ready(async function(){
     var items = await axios.get('https://api.themoviedb.org/3/discover/movie?api_key=403c1367f4654d78c7dc442cf20384a5&language=en-US')
 
-    var mappedItem = items.data.results.map(function(item){
-        return `<div class="swiper-slide slide">
-            <img src=${'http://image.tmdb.org/t/p/original'+`${item.poster_path}`} alt="">
+    // var mappedItem = items.data.results.map(function(item){
+    //     return `<div class="swiper-slide slide">
+    //         <img src=${'http://image.tmdb.org/t/p/original'+`${item.poster_path}`} alt="">
+    //     </div>`
+    // })
+
+    var mappedItem = items.data.results.map((item)=>{
+        return `<div class="swiper-slide">
+            <div class="slide" style="background:url(${'http://image.tmdb.org/t/p/original'+`${item.poster_path}`});
+                background-size:cover;background-position:top left;background-repeat:no-repeat">
+            </div>
         </div>`
     })
 
