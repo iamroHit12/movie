@@ -29,7 +29,7 @@ $(document).ready(async function(){
     var casts = credits.data.cast.slice(0,4).map(cast=>{
         return `${cast.original_name}, `
     })
-
+    
     $('#stars').append(casts)
 
     //directors
@@ -40,7 +40,7 @@ $(document).ready(async function(){
     $('#directors').append(directors)
 
     //writer
-    var writers = credits.data.crew.filter(director=> director.job == 'Writer').map(director=>{
+    var writers = credits.data.crew.filter(director=> director.job == 'Writer' || director.job == 'Story').map(director=>{
         return `${director.original_name}, `
     })
 
