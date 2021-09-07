@@ -14,8 +14,8 @@ $(document).ready(async function(){
 
 $(document).ready(async function(){
     var items = await axios.get('https://api.themoviedb.org/3/discover/movie?api_key=403c1367f4654d78c7dc442cf20384a5&language=en-US&sort_by=vote_count.desc')
-    console.log(items.data.total_pages)
-    $('#viewAll1').attr('href',`/View.html?page=1?total=${items.data.total_pages}`)
+    
+    $('#viewAll1').attr('href',`/View.html?page=1`)
     var mappedItem1 = items.data.results.map(function(item){
         var link1 = `/read.html?id=${item.id}`
         return `<div class="swiper-slide">
@@ -89,7 +89,7 @@ $(document).ready(async function(){
 
 $(document).ready(async function(){
     var items = await axios.get('https://api.themoviedb.org/3/discover/movie?api_key=403c1367f4654d78c7dc442cf20384a5&language=en-US&sort_by=popularity.desc')
-    $('#viewAll2').attr('href',`/View2.html?page=1?total=${items.data.total_pages}`)
+    $('#viewAll2').attr('href',`/View2.html?page=1`)
     var mappedItem3 = items.data.results.map(function(item){
         var link3 = `/read.html?id=${item.id}`
         return `<div class="swiper-slide">
