@@ -67,6 +67,7 @@ $(document).ready(async function() {
         var val = parseInt(document.getElementById('input').value);
         if(val>total){
             window.alert('Page limit exceeded !')
+            document.location.search = `page=1`
         }else{
             document.location.search = `page=${val}`
         }
